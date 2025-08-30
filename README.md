@@ -84,12 +84,6 @@ O frontend roda em http://localhost:5173
 Contribuições são super bem-vindas!
 Faça um fork, crie sua branch (git checkout -b feature/nova-feature) e abra um PR 🚀
 
----
-📜 Licença
-
-Distribuído sob a licença MIT. Veja LICENSE para mais detalhes.
-
----
 
 
 
