@@ -79,17 +79,6 @@ npm run dev
 O frontend roda em http://localhost:5173
 
 ---
-
-🚀 Roadmap
-
- - Melhorar UI da triagem
-
- - Exportar resultados em CSV
-
- - Deploy em cloud (Heroku/AWS/Render)
-
- ---
-
  🤝 Contribuição
 
 Contribuições são super bem-vindas!
@@ -101,11 +90,6 @@ Faça um fork, crie sua branch (git checkout -b feature/nova-feature) e abra um 
 Distribuído sob a licença MIT. Veja LICENSE para mais detalhes.
 
 ---
-```bash
-👉 Dica: dá pra deixar ainda mais maneiro adicionando **badges** (status do GitHub Actions, versão Node/Python, etc.) e um **banner** no topo.  
 
-Quer que eu já monte um banner em imagem (tipo logo + título estilizado pro seu projeto) pra você colocar no começo do README?
-
- ```
 
 
