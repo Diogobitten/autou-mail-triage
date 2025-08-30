@@ -13,7 +13,7 @@ Construído com **React + Vite + Tailwind** no front e **Python + OpenAI API** n
 ## ✨ Funcionalidades
 - 🔍 Classificação automática de e-mails (**Produtivo / Improdutivo**)  
 - 🤖 Sugestão de respostas curtas e objetivas  
-- 📊 Dashboard com estatísticas e gráficos de histórico  
+- 📊 Gráfico de histórico  
 - ☁️ Integração com API OpenAI  
 - 🎨 Interface responsiva em **React + Tailwind**  
 
