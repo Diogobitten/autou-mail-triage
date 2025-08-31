@@ -10,16 +10,33 @@ Globals:
     Architectures: [x86_64]
 
 Resources:
+  HttpApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      CorsConfiguration:
+        AllowOrigins:
+          - "https://main.d3l1x3np6g7b9p.amplifyapp.com"
+        AllowMethods:
+          - GET
+          - POST
+          - OPTIONS
+
+        AllowHeaders:
+          - content-type
+          - x-user-lang
+          - accept-language
+
+        AllowCredentials: false
+
   ApiFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: handler.handler
+      Handler: handler.handler        
       CodeUri: .
       Environment:
         Variables:
 
-          ALLOWED_ORIGINS: "*"
-
+          ALLOWED_ORIGINS: "https://main.d3l1x3np6g7b9p.amplifyapp.com,http://localhost:5173"
       Events:
         CatchAll:
           Type: HttpApi
@@ -27,17 +44,6 @@ Resources:
             ApiId: !Ref HttpApi
             Path: /{proxy+}
             Method: ANY
-
-  HttpApi:
-    Type: AWS::Serverless::HttpApi
-    Properties:
-      CorsConfiguration:
-        AllowOrigins:
-          - "*"  
-        AllowMethods:
-          - "*"
-        AllowHeaders:
-          - "*"
 
 Outputs:
   ApiUrl:

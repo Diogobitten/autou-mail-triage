@@ -10,17 +10,27 @@ from .openai_client import classify_only, generate_reply
 
 app = FastAPI(title="Email Classifier API", version="1.3.0")
 
+def _normalize_origins(value) -> list[str]:
+
+    if isinstance(value, str):
+        items = [o.strip().rstrip("/") for o in value.split(",") if o.strip()]
+    elif isinstance(value, (list, tuple, set)):
+        items = [str(o).strip().rstrip("/") for o in value if str(o).strip()]
+    else:
+        items = []
+    return items or ["*"]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[o.strip() for o in ALLOWED_ORIGINS.split(",")],
-    allow_credentials=True,
+    allow_origins=_normalize_origins(ALLOWED_ORIGINS),
     allow_methods=["*"],
     allow_headers=["*"],
+    allow_credentials=False, 
 )
 
-# ===== helpers de idioma =====
+
 def _sanitize_lang(code: Optional[str]) -> str:
-    """Normaliza entrada do front. Retorna 'pt' | 'en' | 'auto'."""
+
     if not code:
         return "auto"
     c = code.strip().lower()
