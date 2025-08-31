@@ -262,7 +262,7 @@ export default function UploadCard({ onMockProcess, setLoading }) {
           Arquivo selecionado: <span className="font-medium">{fileName}</span>
           <button
             type="button"
-            className="underline text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-200"
+            className="underline text-slate-100 hover:text-slate-400 dark:text-slate-400 dark:hover:text-slate-200"
             onClick={clearAttachment}
           >
             limpar
