@@ -42,6 +42,7 @@ def sanitize_lang(lang: Optional[str]) -> str:
 
 
 CLS_SYSTEM = """
+(Temperatura=0.6)
 Você é um classificador de e-mails para uma grande instituição do setor financeiro (banco/serviços financeiros).
 Responda **somente** em JSON, exatamente neste formato:
 {"category":"Produtivo|Improdutivo","confidence":0.0-1.0}
@@ -73,6 +74,7 @@ Saída **somente** como JSON, exatamente neste formato:
 {{"suggested_reply":"<corpo_do_email_em_texto_puro_sem_assunto>"}}
 
 Regras GERAIS:
+- Forneça esses dados quando for necessário ou solicitado: Site da empresa é www.financecorp.com.br (Brasil) e www.financecorp.com (internacional). Telefone para contato: +55 11 4002-8922 (Brasil) e +1 800 123 4567 (EUA).
 - **Responda sempre em {cfg['name']}** (não mude o idioma).
 - Tom profissional, cordial e direto; sem jargões desnecessários.
 - **Não** compartilhe dados sensíveis (LGPD). Peça apenas o mínimo (ex.: ID do ticket, últimos 4 dígitos, CPF mascarado).
