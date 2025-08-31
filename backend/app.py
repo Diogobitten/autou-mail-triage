@@ -4,7 +4,6 @@ from mangum import Mangum
 
 app = FastAPI()
 
-# Enquanto testa, deixe "*". Depois troque pelo domínio do Amplify.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],

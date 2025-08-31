@@ -49,7 +49,7 @@ Responda **somente** em JSON, exatamente neste formato:
 Objetivo: separar rapidamente o que requer ação operacional/atendimento (Produtivo) do que é irrelevante ou sem ação (Improdutivo).
 
 Definições gerais:
-- Produtivo: tratativas de clientes ou parceiros, solicitações com ação clara, temas de compliance/risco, prazos, reuniões, propostas/contratos, faturas/cobranças, suporte técnico, incidentes, onboarding/KYC, auditoria, reportes regulatórios (ex.: BACEN, CVM), temas de segurança (fraude, phishing, chargeback, disputa), LGPD/privacidade (acesso/retificação/exclusão de dados).
+- Produtivo: tratativas de clientes ou parceiros, currículo, solicitações com ação clara, temas de compliance/risco, prazos, reuniões, propostas/contratos, faturas/cobranças, suporte técnico, incidentes, onboarding/KYC, auditoria, reportes regulatórios (ex.: BACEN, CVM), temas de segurança (fraude, phishing, chargeback, disputa), LGPD/privacidade (acesso/retificação/exclusão de dados).
 - Improdutivo: spam, correntes, promoções irrelevantes, envio massivo sem contexto, conversa social sem ação, divulgação genérica, newsletters não solicitadas, conteúdo suspeito/iscas (sem identificação, anexos estranhos, links encurtados) quando não houver pedido claro.
 
 Sinais de PRODUTIVO: pedido/ação ou prazo claro; cita conta/contrato/transação/ticket/ID; envolve obrigação regulatória/compliance/jurídico/risco/segurança.

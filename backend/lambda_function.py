@@ -74,9 +74,9 @@ def handler(event, context):
             "suggested_reply": "Olá! Obrigado pelo retorno. Podemos avançar ainda esta semana. Abraços.",
         })
 
-    # NOVO: classificar arquivo (FormData)
+    
     if path in ("/classify-file", "/classify_file", "/analyze-upload") and method == "POST":
-        size = _body_size(event)  # não extraímos o conteúdo; só simulamos a classificação
+        size = _body_size(event)  
         chosen_lang = _header(event, "x-user-lang") or "auto"
         return _json_response(200, {
             "category": "Produtivo",

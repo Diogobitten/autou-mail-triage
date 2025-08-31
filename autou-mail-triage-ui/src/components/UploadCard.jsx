@@ -14,9 +14,9 @@ export default function UploadCard({ onMockProcess, setLoading }) {
   const [fileName, setFileName] = useState('')
   const [fileObj, setFileObj] = useState(null)
 
-  // --- aviso ao digitar com anexo ---
+
   const [showAttachWarn, setShowAttachWarn] = useState(false)
-  const [pendingText, setPendingText] = useState('') // o que o usuário tentou digitar
+  const [pendingText, setPendingText] = useState('') 
   const dragCounter = useRef(0)
   const fileRef = useRef()
 
@@ -66,7 +66,7 @@ export default function UploadCard({ onMockProcess, setLoading }) {
     if (fileRef.current) fileRef.current.value = null
   }
 
-  // ------- drag & drop -------
+
   function onDragEnter(e) {
     e.preventDefault()
     dragCounter.current += 1
@@ -86,11 +86,11 @@ export default function UploadCard({ onMockProcess, setLoading }) {
     await handleSelectedFile(f)
   }
 
-  // ------- textarea: bloqueia digitação se houver anexo -------
+ 
   function handleTextChange(e) {
     const next = e.target.value
     if (fileObj) {
-      // guarda o que o usuário tentou digitar e mostra aviso
+
       setPendingText(next)
       setShowAttachWarn(true)
       return
