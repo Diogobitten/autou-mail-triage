@@ -27,3 +27,8 @@ dist-ssr
 .env
 .env.local
 .env.*.local
+
+.aws-sam/
+.venv/
+__pycache__/
+*.pyc
